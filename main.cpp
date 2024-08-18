@@ -1,9 +1,6 @@
 #include <iostream>
 #include "funcionescalculadora.h"
-#include <windows.h>
 using namespace std;
-
-HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 int main(){
 	
@@ -12,7 +9,8 @@ int main(){
 		system("cls");
 		color(hConsole, 7);
 		cout << endl << endl;
-		cout << "\t"; color(hConsole, numerocolor); cout << "______________________________" << endl;
+		color(hConsole, numerocolores); 
+		cout << "\t______________________________" << endl;
 		cout << "\t   CALCULADORA CIENTIFICA" << endl;
 		cout << "\t______________________________" << endl << endl;
 		cout << "\t X"   << "\t I" << "\t M" << "\t T" << endl;
@@ -26,9 +24,10 @@ int main(){
 		cout << "\t g"   << "\t j " << "\t b" << "\t o" << endl;
 		cout << "\tlog10"<< "\tlog2" << "\tnotC" << "\t %" << endl << endl;
 		cout << endl;
+		color(hConsole, 7);
 		cout << "\t=  ";
 		cin >> opcion;
-		cout << endl << endl;
+		
 		system("cls");
 		cout << endl << endl;
 		switch(opcion){

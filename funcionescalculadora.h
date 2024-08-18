@@ -4,7 +4,10 @@
 #define color SetConsoleTextAttribute
 using namespace std;
 
-extern int numerocolor;
+extern HANDLE hConsole;
+
+extern int numerocolorletra;
+extern int numerocolores;
 void informacion();
 void menu();
 

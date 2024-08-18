@@ -5,7 +5,8 @@ using namespace std;
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
-int numerocolor=7;
+int numerocolorletra=7;
+int numerocolores=7;
 
 void informacion(){
 	
@@ -28,7 +29,7 @@ void menu(){
 		cout << endl << endl;
 		cout << "\t\t\tMenu de la calculadora" << endl << endl;
 		cout << "          Color pantalla          Color letra          Idioma          Salir" << endl << endl;
-		cin.ignore();
+		if(0<=0) cin.ignore();
 		getline(cin, respuesta);
 		
 		tamanorespuesta=respuesta.length();
@@ -40,23 +41,59 @@ void menu(){
 			valido = false;
 		} else if (tamanorespuesta<=24){
 			cout << "Elija el color del fondo de pantalla" << endl << endl;
-			for(int i=numerocolor; i<242; i+=16){
+			int j=1;
+			for(int i=numerocolorletra; i<242; i+=16){
+				color(hConsole, i);
+				cout << "\tColor " << j;
+				color(hConsole, 7);
+				cout << endl << endl;
+				j++;
+			}
+			
+			do{
+				color(hConsole, 7);
+				cout << endl << endl << "\t=";
+				cin >> numero;
+				if(numero <=15 && numero > 0){
+						// simplificacion de N*n + (15-N+1)(n-1) = numerocolor*numero+(15-numerocolor+1)(numero-1)
+					// N+16(n-1)
+					numerocolores=numerocolorletra+16*(numero-1);
+					color(hConsole, numerocolores);
+				} else {
+					color(hConsole, 4);
+					cout << endl << "\tIngrese un numero valido." << endl << endl;
+				}
+			} while(numero >15 || numero <= 0);
+			
+		} else if (tamanorespuesta<=34){
+			valido = false;
+		} else if (tamanorespuesta<=45){
+			cout << "Elija el color de letra" << endl << endl;
+			for(int i=1; i<=15; i++){
 				color(hConsole, i);
 				cout << "\tColor " << i;
 				color(hConsole, 7);
 				cout << endl << endl;
 			}
-			color(hConsole, 7);
-			cout << endl << endl << "\t=";
-			cin >> numero;
-			// simplificacion de N*n + (15-N+1)(n-1) = numerocolor*numero+(15-numerocolor+1)(numero-1)
-			// N+16(n-1)
-			numerocolor=numerocolor+16*(numero-1);
-			color(hConsole, numerocolor);
-		} else if (tamanorespuesta<=34){
-			valido = false;
-		} else if (tamanorespuesta<=45){
-			cout << "Elija el color de letra" << endl;
+			
+			do{
+				
+				int aux=numerocolorletra;
+				
+				cout << endl << endl << "\t=";
+				cin >> numerocolorletra;
+				
+				int diferencia=numerocolorletra-aux;
+				numerocolores=numerocolores+diferencia;
+				
+				if(numerocolorletra <= 15  && numerocolorletra > 0){
+					color(hConsole, numerocolores);
+				}else{
+					color(hConsole, 4);
+					cout << endl << "\tIngrese un numero valido." << endl << endl;
+				}
+			} while (numerocolorletra > 15  && numerocolorletra <= 0);
+		
 		} else if (tamanorespuesta<=55){
 			valido = false;
 		} else if (tamanorespuesta<=61){
@@ -70,10 +107,11 @@ void menu(){
 		
 		color(hConsole, 7);
 		
-		cout << endl << endl<< endl << endl;
 		if(!valido){
 			cout << "Indique una opcion valida." << endl;
 		}
+		
+		cout << endl << endl<< endl << endl;
 		if(!salir){
 			system("pause");
 		}
