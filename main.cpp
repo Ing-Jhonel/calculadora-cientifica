@@ -41,12 +41,16 @@ int main(){
 				menu();
 				break;
 			case 'T':
+			 	
 				break;
 			case 'l':
+				simplificar();
 				break;
 			case 'q':
+				mcm();
 				break;
 			case 'p':
+				mcd();
 				break;
 			case 'v':
 				break;

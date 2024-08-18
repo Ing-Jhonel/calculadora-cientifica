@@ -10,5 +10,8 @@ extern int numerocolorletra;
 extern int numerocolores;
 void informacion();
 void menu();
+void simplificar();
+void mcm();
+void mcd();
 
 #endif

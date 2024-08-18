@@ -14,7 +14,9 @@ void informacion(){
 	cout << "\tModelo: CASIO 2024." << endl;
 	cout << "\tAño: 2024." << endl;
 	cout << "\tCreador: Jhonel Gerson Apaza Pacompia." << endl << endl;
-	cout << "\tDerechos reservados UNJBG-TACNA.";
+	cout << "\tDerechos reservados UNJBG-TACNA." << endl << endl;
+	cout << "\tOperadores matematicos:" << endl << endl;
+	cout << "\t+ = suma" << endl << "\t- = resta" << endl << "\t* = multiplicacion" << endl << "\t/ = division";
 }
 
 void menu(){
@@ -98,6 +100,7 @@ void menu(){
 			valido = false;
 		} else if (tamanorespuesta<=61){
 			cout << "Elija el idioma" << endl;
+			
 		} else if (tamanorespuesta<=71){
 			valido = false;
 		} else if (tamanorespuesta<=76){
@@ -116,4 +119,61 @@ void menu(){
 			system("pause");
 		}
 	} while(!salir);
+}
+
+void simplificar(){
+	
+	string expresion;
+	int numerador;
+	int denominador;
+	int mcd;
+	cout << "\tIndique su fraccion" << endl << endl;
+	cout << "    Nominador ->  ";
+	cin >> numerador;
+	cout << "                 ------";
+	cout << endl;
+	cout << "  Denominador ->  ";
+	cin >> denominador;
+	
+	while (denominador == 0) {
+		color(hConsole, 4);
+        cout << endl << "\tEl denominador no puede ser 0. Por favor, ingrese un denominador valido." << endl << endl;
+        color(hConsole, 6);
+        cout << "\tCorrija su fraccion" << endl << endl;
+        cout << "    Numerador ->  " << numerador << endl;
+        cout << "                 ------" << endl;
+        cout << "  Denominador ->  ";
+        cin >> denominador;
+    }
+	color(hConsole, 7);
+    // Guardar los valores originales para la simplificación
+    int numOriginal = numerador;
+    int denOriginal = denominador;
+
+    // Calcular el MCD usando el algoritmo de Euclides
+    while (denominador != 0) {
+        int aux = denominador;
+        denominador = numerador % denominador;
+        numerador = aux;
+    }
+
+    // El MCD es ahora el valor de numerador
+    mcd = numerador;
+
+    // Simplificar la fracción dividiendo por el MCD
+    numOriginal = numOriginal/mcd;
+    denOriginal = denOriginal/mcd;
+    
+    cout << endl << endl << endl << "\tFraccion final:" << endl << endl << endl;
+    cout << "\t    " << numOriginal << endl;
+    cout << "\t\t" << "------" << endl;
+    cout << "\t    " << denOriginal << endl << endl;
+	
+}
+
+void mcm(){
+	
+}
+void mcd(){
+	
 }
