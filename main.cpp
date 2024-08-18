@@ -1,12 +1,20 @@
 #include <iostream>
+#include "funcionescalculadora.h"
+#include <windows.h>
 using namespace std;
+
+HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 int main(){
 	
 	char opcion;
-	
 	do{
-		cout << endl << endl << "\t   CALCULADORA CIENTIFICA" << endl << endl << endl;
+		system("cls");
+		color(hConsole, 7);
+		cout << endl << endl;
+		cout << "\t"; color(hConsole, numerocolor); cout << "______________________________" << endl;
+		cout << "\t   CALCULADORA CIENTIFICA" << endl;
+		cout << "\t______________________________" << endl << endl;
 		cout << "\t X"   << "\t I" << "\t M" << "\t T" << endl;
 		cout << "\tSALIR"<< "\tINFO" << "\tMENU" << "\tHIST" << endl << endl;
 		cout << "\t l"   << "\t q" << "\t p" << "\t v" << endl;
@@ -20,14 +28,18 @@ int main(){
 		cout << endl;
 		cout << "\t=  ";
 		cin >> opcion;
-		
+		cout << endl << endl;
+		system("cls");
+		cout << endl << endl;
 		switch(opcion){
 			case 'X':
 				cout << "\tSaliendo de la calculadora...";
 				break;
 			case 'I':
+				informacion();
 				break;
 			case 'M':
+				menu();
 				break;
 			case 'T':
 				break;
@@ -64,7 +76,10 @@ int main(){
 			case 'o':
 				break;
 		}
-		cout << endl << endl;
+		cout << endl << endl << endl << endl << endl << endl << endl << "\t" << endl;
+		system("pause");
+		cout << endl << endl << endl;
+		
 	} while(opcion != 'X');
 	return 0;
 }
