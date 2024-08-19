@@ -22,4 +22,5 @@ void raizcuadrada();
 void raizcubica();
 void exponenciacion();
 void radianes();
+void logaritmo10();
 #endif

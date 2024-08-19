@@ -80,6 +80,7 @@ int main(){
 				radianes();
 				break;
 			case 'g':
+				logaritmo10();
 				break;
 			case 'j':
 				break;

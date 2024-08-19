@@ -322,7 +322,7 @@ void hipotenusa(){
 
 void raizcuadrada(){
 	
-	int numero;
+	double numero;
 	cout << "\tIndique un numero: ";
 	cin >> numero;
 	cout << endl << endl << endl;
@@ -332,7 +332,7 @@ void raizcuadrada(){
 
 void raizcubica(){
 	
-	int numero;
+	double numero;
 	cout << "\tIndique un numero: ";
 	cin >> numero;
 	cout << endl << endl << endl;
@@ -341,8 +341,8 @@ void raizcubica(){
 
 void exponenciacion(){
 	
-	int numero;
-	int exponente;
+	double numero;
+	double exponente;
 	cout << "\tIndique un numero: ";
 	cin >> numero;
 	cout << endl << endl;
@@ -360,7 +360,19 @@ void radianes(){
 	cin >> anguloGrados;
 	anguloRadianes = anguloGrados*(M_PI/180.0);
 	cout << endl << endl;
-	cout << "El angulo " << anguloGrados << " en radiantes es --> " << anguloRadianes;
+	cout << "\tEl angulo " << anguloGrados << " en radiantes es --> " << anguloRadianes;
+	
+}
+
+void logaritmo10(){
+	
+	double numero;
+    double logBase10;
+    cout << "\tIngrese un numero: ";
+    cin >> numero;
+    logBase10 = log10(numero);
+    cout << endl << endl << endl;
+    cout << "\tEl logaritmo base 10 de " << numero << " es --> " << logBase10 << endl;
 	
 }
 
