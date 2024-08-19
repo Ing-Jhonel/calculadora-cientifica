@@ -165,14 +165,34 @@ void simplificar(){
     denOriginal = denOriginal/mcd;
     
     cout << endl << endl << endl << "\tFraccion final:" << endl << endl << endl;
-    cout << "\t    " << numOriginal << endl;
-    cout << "\t\t" << "------" << endl;
-    cout << "\t    " << denOriginal << endl << endl;
+    cout << "\t\t    " << numOriginal << endl;
+    cout << "\t\t  " << "------" << endl;
+    cout << "\t\t    " << denOriginal << endl << endl;
 	
 }
 
 void mcm(){
+	int numero1, numero2;
+	cout << "\tIndique el primer numero: ";
+	cin >> numero1;
+	cout << endl;
+	cout << "\tIndique el segundo numero: ";
+	cin >> numero2;
 	
+	int a=numero1;
+	int b=numero2;
+	
+	while(b!=0){
+		int aux=b;
+		b=a%b;
+		a=aux;
+	}
+	
+	int mcd=a;
+	
+	int mcm=(numero1*numero2)/mcd;
+	
+	cout << endl << endl << endl << "\tEl minimo comun multiplo (mcm) de " << numero1 << " y " << numero2 << " es --> " << mcm;
 }
 void mcd(){
 	
