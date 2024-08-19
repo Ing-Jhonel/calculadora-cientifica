@@ -53,6 +53,7 @@ int main(){
 				mcd();
 				break;
 			case 'v':
+				valorabsoluto();
 				break;
 			case 's':
 				break;

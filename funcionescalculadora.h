@@ -13,5 +13,5 @@ void menu();
 void simplificar();
 void mcm();
 void mcd();
-
+void valorabsoluto();
 #endif

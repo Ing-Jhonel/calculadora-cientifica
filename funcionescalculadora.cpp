@@ -196,6 +196,7 @@ void mcm(){
 	
 	cout << endl << endl << endl << "\tEl minimo comun multiplo (mcm) de " << numero1 << " y " << numero2 << " es --> " << mcm;
 }
+
 void mcd(){
 	
 	int numero1, numero2;
@@ -217,4 +218,20 @@ void mcd(){
 	int mcd=a;
 	
 	cout << endl << endl << endl << "\tEl maximo comun divisor (mcd) de " << numero1 << " y " << numero2 << " es --> " << mcd;
+}
+
+void valorabsoluto(){
+	
+	int numero;
+	cout << "Indique un numero: ";
+	cin >> numero;
+	cout << endl;
+	
+	cout << "El valor absoluto de " << numero << " es --> ";
+	if(numero >= 0){
+		cout << numero;
+	} else {
+		cout << -numero;
+	}
+	
 }
