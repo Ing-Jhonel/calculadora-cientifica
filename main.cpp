@@ -22,7 +22,7 @@ int main(){
 		cout << "\t z"   << "\t k" << "\t n" << "\t r" << endl;
 		cout << "\tr2(x)"<< "\tr3(x)" << "\tx^n" << "\trad" << endl << endl;
 		cout << "\t g"   << "\t j " << "\t b" << "\t o" << endl;
-		cout << "\tlog10"<< "\tlog2" << "\tnotC" << "\t %" << endl << endl;
+		cout << "\tLog10"<< "\tLog2" << "\tLogN" << "\t notC" << endl << endl;
 		cout << endl;
 		color(hConsole, 7);
 		cout << "\t=  ";

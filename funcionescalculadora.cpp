@@ -376,3 +376,15 @@ void logaritmo10(){
 	
 }
 
+void logaritmo2(){
+	
+	double numero;
+    double logBase2 ;
+    cout << "\tIngrese un numero: ";
+    cin >> numero;
+    logBase2  = log2(numero);
+    cout << endl << endl << endl;
+    cout << "\tEl logaritmo base 2 de " << numero << " es --> " << logBase2 << endl;
+	
+}
+
