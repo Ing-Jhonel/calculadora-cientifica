@@ -23,4 +23,6 @@ void raizcubica();
 void exponenciacion();
 void radianes();
 void logaritmo10();
+void logaritmo2();
+void logaritmoNatural();
 #endif

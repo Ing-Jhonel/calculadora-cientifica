@@ -83,8 +83,10 @@ int main(){
 				logaritmo10();
 				break;
 			case 'j':
+				logaritmo2();
 				break;
 			case 'b':
+				logaritmoNatural();
 				break;
 			case 'o':
 				break;
