@@ -71,7 +71,7 @@ int main(){
 				raizcuadrada();
 				break;
 			case 'k':
-				
+				raizcubica();
 				break;
 			case 'n':
 				

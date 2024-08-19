@@ -329,3 +329,14 @@ void raizcuadrada(){
 	cout << "\tLa raiz cuadrada de " << numero << " es --> " << sqrt(numero);
 }
 
+
+void raizcubica(){
+	
+	int numero;
+	cout << "\tIndique un numero: ";
+	cin >> numero;
+	cout << endl << endl << endl;
+	cout << "\tLa raiz cubica de " << numero << " es --> " << cbrt(numero);
+}
+
+
