@@ -77,7 +77,7 @@ int main(){
 				exponenciacion();
 				break;
 			case 'r':
-				
+				radianes();
 				break;
 			case 'g':
 				break;

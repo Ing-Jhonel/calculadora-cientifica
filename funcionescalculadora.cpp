@@ -352,4 +352,15 @@ void exponenciacion(){
 	cout << "\t" << numero << " elevado a la " << exponente << " es --> " << pow(numero, exponente);
 }
 
+void radianes(){
+	
+	double anguloGrados;
+	double anguloRadianes;
+	cout << "\tIndique el angulo en grados: ";
+	cin >> anguloGrados;
+	anguloRadianes = anguloGrados*(M_PI/180.0);
+	cout << endl << endl;
+	cout << "El angulo " << anguloGrados << " en radiantes es --> " << anguloRadianes;
+	
+}
 
