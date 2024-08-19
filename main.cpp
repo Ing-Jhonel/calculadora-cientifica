@@ -65,6 +65,7 @@ int main(){
 				tangente();
 				break;
 			case 'h':
+				hipotenusa();
 				break;
 			case 'z':
 				break;

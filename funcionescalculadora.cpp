@@ -246,7 +246,7 @@ void seno(){
 	cout << "\tIndique su angulo en grados: ";
 	cin >> anguloGrados;
 	
-	anguloRadianes= anguloGrados*(M_PI/180);
+	anguloRadianes= anguloGrados*(M_PI/180.0);
 	seno = sin(anguloRadianes);
 	cout << endl << endl;
 	cout << "\tSeno(" << anguloGrados << ") = " << seno;
@@ -262,7 +262,7 @@ void coseno(){
 	cout << "\tIndique su angulo en grados: ";
 	cin >> anguloGrados;
 	
-	anguloRadianes= anguloGrados*(M_PI/180);
+	anguloRadianes= anguloGrados*(M_PI/180.0);
 	coseno = cos(anguloRadianes);
 	cout << endl << endl;
 	cout << "\tCoseno(" << anguloGrados << ") = " << coseno;
@@ -270,5 +270,51 @@ void coseno(){
 
 void tangente(){
 	
+	double anguloGrados;
+	double anguloRadianes;
+	double tangente;
+	
+	cout << "\tIndique su angulo en grados: ";
+	cin >> anguloGrados;
+	
+	anguloRadianes= anguloGrados*(M_PI/180.0);
+	tangente = tan(anguloRadianes);
+	cout << endl << endl;
+	cout << "\tTangente(" << anguloGrados << ") = " << tangente;
 }
 
+void hipotenusa(){
+	cout << "          *" << endl;;
+	cout << "          **" << endl;
+	cout << "          *  *" << endl;
+	cout << "      CA1 *    *" << endl;
+	cout << "          *      *" << endl;
+	cout << "          *        *" << endl;
+	cout << "          * * * * *  *" << endl;
+	cout << "               CA2" << endl << endl;
+	
+	char respuesta;
+	cout << "\t¿Su triangulo es un triangulo rectangulo?(s/n): ";
+	cin >> respuesta;
+	
+	cout << endl << endl;
+	int cateto1;
+	int cateto2;
+	int hipotenusa;
+	switch(respuesta){
+		case 's':
+			cout << "\tCateto 1: ";
+			cin >> cateto1;
+			cout << "\tCateto 2: ";
+			cin >> cateto2;
+			
+			hipotenusa = sqrt((cateto1*cateto1)+(cateto2*cateto2));
+			
+			cout << "\t Hipotenusa --> " << hipotenusa;
+			break;
+		case 'n':
+			cout << "\tLa hipotenusa solo aplica a triangulos rectangulos."	;
+			break;
+	}
+
+}

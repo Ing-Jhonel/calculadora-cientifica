@@ -17,4 +17,5 @@ void valorabsoluto();
 void seno();
 void coseno();
 void tangente();
+void hipotenusa();
 #endif
