@@ -238,6 +238,7 @@ void valorabsoluto(){
 }
 
 void seno(){
+	
 	double anguloGrados;
 	double anguloRadianes;
 	double seno;
@@ -254,6 +255,17 @@ void seno(){
 
 void coseno(){
 	
+	double anguloGrados;
+	double anguloRadianes;
+	double coseno;
+	
+	cout << "\tIndique su angulo en grados: ";
+	cin >> anguloGrados;
+	
+	anguloRadianes= anguloGrados*(M_PI/180);
+	coseno = cos(anguloRadianes);
+	cout << endl << endl;
+	cout << "\tCoseno(" << anguloGrados << ") = " << coseno;
 }
 
 void tangente(){
