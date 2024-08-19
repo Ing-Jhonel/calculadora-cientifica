@@ -1,6 +1,7 @@
 #include "funcionescalculadora.h"
 #include <iostream>
 #include <windows.h>
+#include <cmath>
 using namespace std;
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -223,11 +224,11 @@ void mcd(){
 void valorabsoluto(){
 	
 	int numero;
-	cout << "Indique un numero: ";
+	cout << "\tIndique un numero: ";
 	cin >> numero;
 	cout << endl;
 	
-	cout << "El valor absoluto de " << numero << " es --> ";
+	cout << "\tEl valor absoluto de " << numero << " es --> ";
 	if(numero >= 0){
 		cout << numero;
 	} else {
@@ -235,3 +236,27 @@ void valorabsoluto(){
 	}
 	
 }
+
+void seno(){
+	double anguloGrados;
+	double anguloRadianes;
+	double seno;
+	
+	cout << "\tIndique su angulo en grados: ";
+	cin >> anguloGrados;
+	
+	anguloRadianes= anguloGrados*(M_PI/180);
+	seno = sin(anguloRadianes);
+	cout << endl << endl;
+	cout << "\tSeno(" << anguloGrados << ") = " << seno;
+	
+}
+
+void coseno(){
+	
+}
+
+void tangente(){
+	
+}
+

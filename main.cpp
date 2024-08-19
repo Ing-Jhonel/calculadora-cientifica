@@ -56,10 +56,13 @@ int main(){
 				valorabsoluto();
 				break;
 			case 's':
+				seno();
 				break;
 			case 'c':
+				coseno();
 				break;
-			case 'r':
+			case 't':
+				tangente();
 				break;
 			case 'h':
 				break;
@@ -69,7 +72,7 @@ int main(){
 				break;
 			case 'n':
 				break;
-			case 't':
+			case 'r':
 				break;
 			case 'g':
 				break;

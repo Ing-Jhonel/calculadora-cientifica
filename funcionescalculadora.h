@@ -14,4 +14,7 @@ void simplificar();
 void mcm();
 void mcd();
 void valorabsoluto();
+void seno();
+void coseno();
+void tangente();
 #endif
