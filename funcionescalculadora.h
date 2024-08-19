@@ -18,4 +18,8 @@ void seno();
 void coseno();
 void tangente();
 void hipotenusa();
+void raizcuadrada();
+void raizcubica();
+void exponenciacion();
+void radianes();
 #endif

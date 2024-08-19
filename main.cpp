@@ -68,12 +68,16 @@ int main(){
 				hipotenusa();
 				break;
 			case 'z':
+				raizcuadrada();
 				break;
 			case 'k':
+				
 				break;
 			case 'n':
+				
 				break;
 			case 'r':
+				
 				break;
 			case 'g':
 				break;

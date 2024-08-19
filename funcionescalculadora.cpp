@@ -305,12 +305,13 @@ void hipotenusa(){
 		case 's':
 			cout << "\tCateto 1: ";
 			cin >> cateto1;
+			cout << endl;
 			cout << "\tCateto 2: ";
 			cin >> cateto2;
 			
 			hipotenusa = sqrt((cateto1*cateto1)+(cateto2*cateto2));
 			
-			cout << "\t Hipotenusa --> " << hipotenusa;
+			cout << endl << endl << "\tHipotenusa --> " << hipotenusa;
 			break;
 		case 'n':
 			cout << "\tLa hipotenusa solo aplica a triangulos rectangulos."	;
@@ -318,3 +319,13 @@ void hipotenusa(){
 	}
 
 }
+
+void raizcuadrada(){
+	
+	int numero;
+	cout << "\tIndique un numero: ";
+	cin >> numero;
+	cout << endl << endl << endl;
+	cout << "\tLa raiz cuadrada de " << numero << " es --> " << sqrt(numero);
+}
+
