@@ -10,9 +10,9 @@ int main(){
 		color(hConsole, 7);
 		cout << endl << endl;
 		color(hConsole, numerocolores); 
-		cout << "\t______________________________" << endl;
+		cout << "\t******************************" << endl;
 		cout << "\t   CALCULADORA CIENTIFICA" << endl;
-		cout << "\t______________________________" << endl << endl;
+		cout << "\t******************************" << endl << endl;
 		cout << "\t X"   << "\t I" << "\t M" << "\t T" << endl;
 		cout << "\tSALIR"<< "\tINFO" << "\tMENU" << "\tHIST" << endl << endl;
 		cout << "\t l"   << "\t q" << "\t p" << "\t v" << endl;

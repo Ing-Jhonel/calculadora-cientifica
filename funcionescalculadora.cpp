@@ -127,6 +127,8 @@ void simplificar(){
 	int numerador;
 	int denominador;
 	int mcd;
+	cout << endl << "\t\tSIMPLIFICACION DE FRACCIONES" << endl;
+	cout << 				"\t\t____________________________" << endl << endl;
 	cout << "\tIndique su fraccion" << endl << endl;
 	cout << "    Nominador ->  ";
 	cin >> numerador;
@@ -196,4 +198,23 @@ void mcm(){
 }
 void mcd(){
 	
+	int numero1, numero2;
+	cout << "\tIndique el primer numero: ";
+	cin >> numero1;
+	cout << endl;
+	cout << "\tIndique el segundo numero: ";
+	cin >> numero2;
+	
+	int a=numero1;
+	int b=numero2;
+	
+	while(b!=0){
+		int aux=b;
+		b=a%b;
+		a=aux;
+	}
+	
+	int mcd=a;
+	
+	cout << endl << endl << endl << "\tEl maximo comun divisor (mcd) de " << numero1 << " y " << numero2 << " es --> " << mcd;
 }
