@@ -74,7 +74,7 @@ int main(){
 				raizcubica();
 				break;
 			case 'n':
-				
+				exponenciacion();
 				break;
 			case 'r':
 				

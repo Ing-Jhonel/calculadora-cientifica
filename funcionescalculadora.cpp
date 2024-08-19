@@ -339,4 +339,17 @@ void raizcubica(){
 	cout << "\tLa raiz cubica de " << numero << " es --> " << cbrt(numero);
 }
 
+void exponenciacion(){
+	
+	int numero;
+	int exponente;
+	cout << "\tIndique un numero: ";
+	cin >> numero;
+	cout << endl << endl;
+	cout << "\tIndique el exponente: ";
+	cin >> exponente;
+	cout << endl << endl << endl;
+	cout << "\t" << numero << " elevado a la " << exponente << " es --> " << pow(numero, exponente);
+}
+
 
