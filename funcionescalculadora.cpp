@@ -388,3 +388,15 @@ void logaritmo2(){
 	
 }
 
+void logaritmoNatural(){
+	
+	double numero;
+    double logNatural ;
+    cout << "\tIngrese un numero: ";
+    cin >> numero;
+    logNatural = log(numero);
+    cout << endl << endl << endl;
+    cout << "\tEl logaritmo natural de " << numero << " es --> " << logNatural << endl;
+	
+}
+
