@@ -89,6 +89,7 @@ int main(){
 				logaritmoNatural();
 				break;
 			case 'o':
+				notacionCientifica();
 				break;
 		}
 		cout << endl << endl << endl << endl << endl << endl << endl << "\t" << endl;

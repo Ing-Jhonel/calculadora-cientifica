@@ -329,7 +329,6 @@ void raizcuadrada(){
 	cout << "\tLa raiz cuadrada de " << numero << " es --> " << sqrt(numero);
 }
 
-
 void raizcubica(){
 	
 	double numero;
@@ -400,3 +399,67 @@ void logaritmoNatural(){
 	
 }
 
+void notacionCientifica(){
+	
+	float numero;
+	cout << "\tIngrese un numero: ";
+	cin >> numero;
+	cout << endl << endl << endl;
+	
+	float residuo = fmod(numero, 1);
+	int primerdigito = numero;
+
+	int c=0;
+	int decimales;
+	int aux;
+	int b;
+	int ceros=0;
+	if(numero != 0){
+		if(primerdigito != 0){
+			
+			aux = numero;
+				
+			while(aux!=0){
+				aux = aux / 10;
+				c++;			
+			}
+			
+			decimales = c-1;
+			for(int i=0; i<decimales; i++){
+				numero = numero / 10;
+			}
+			
+			cout << "\t= " << numero << " x 10" << "^" << decimales;
+			
+		} else {
+			
+			int a=0;
+			double long temp = 1;
+			//transformar de decimal a entero
+			while(	temp != 0) {
+		        numero = numero * 10;
+		        temp = fmod(numero, 1);
+		        a++;
+		    }
+			
+			
+			aux = numero;
+			
+			//hallar las veces para dividir entre 10 el numero y quede un entero y decimales
+			while(aux!=0){
+				aux = aux/10;
+				c++;
+			}
+
+			decimales = a-1;
+			
+			for(int i=0; i<c-1	; i++){
+				numero = numero / 10;
+			}
+			
+			cout << "\t= " << numero << " x 10" << "^" << -decimales;
+		}
+	} else {
+		cout << "0";
+	}
+}

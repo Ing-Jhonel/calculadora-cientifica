@@ -25,4 +25,5 @@ void radianes();
 void logaritmo10();
 void logaritmo2();
 void logaritmoNatural();
+void notacionCientifica();
 #endif
